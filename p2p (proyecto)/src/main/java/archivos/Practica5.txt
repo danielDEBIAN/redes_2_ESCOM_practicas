@@ -1,0 +1,32 @@
+Para esta practica, se realizo la obtencion de una señal de voz que posteriormente se
+digitalizo en un convertidor analogico-digital.
+
+Este circuito consta de 4 partes, la amplificacion de la señal, el filtrado de la señal,
+el circuito de offset y finalmente el convertidor analogico-digital.
+
+Tanto para la amplificacion como para el filtrado de la señal se utilizo el amplificador
+operacional LM741, y como este circuito es simulado, tuvimos que reemplazar el microfono que
+se usaria en el armado en fisico por una fuente de voltaje, la cual la configuramos con 1v a
+tres mil hertz para lograr una correcta simulacion de como se comportaria este mismo circuito
+con el microfono electrect.
+
+Una vez que conectamos a tierra dicha fuente, esta va directo a la resistencia de un kilo ohm
+que esta conectada al pin 3 del primer LM741, el cual es el circuito que amplificara la señal.
+Este amplificador aumenta 200 veces el voltaje introducido con el fin de que el filtro pueda
+detectar dicha señal.
+
+La salida de este primer LM741 va conectado a los siguientes amplificadores operacionales, los
+cuales funcionan como filtro pasa banda. Este filtro esta conectado en cascada, osea que la 
+salida de un amplificador ba a la entrada del otro y con esto logramos que la señal pase por
+una etapa de ganancia. 
+
+El primer LM741 es un filtro de pasa bajas de tres kilo hertz, cuya salida esta conectada a 
+un filtro pasa-altas de trescientos hertz, y asi generando el filtro pasa-banda al cual se le 
+introduce la señal que se amplifico anteriormente.
+
+Posterior a esto, este filtro sera conectado al circuito de Offset
+
+Como podemos ver en esta simulacion, el comportamiento de cada una de las salidas en el circuito
+la podemos observar en el osciloscopio. En el podemos ver que la señal inicial es muy pequeña 
+por lo que si requiere que utilizemos un amplificador, para posteriormente filtrar solo las
+frecuencias y amplitudes que queremos de dicha onda.
